@@ -214,6 +214,38 @@ The notebooks are structured to minimize instructor preparation while maximizing
 
 ---
 
+### Lab 8: Diffusion Models — From Noise to Images
+
+**Core Concepts**: Generative AI, diffusion models, and the technology behind DALL-E and Stable Diffusion
+
+**Learning Objectives**:
+- Understand forward and reverse diffusion processes
+- Implement progressive noise addition to images
+- Train a denoising U-Net neural network
+- Generate images from pure random noise
+- Use professional pre-trained diffusion models
+- Connect toy implementations to DALL-E and Stable Diffusion
+- Understand text-to-image conditioning
+
+**Materials**:
+- [Student Handout](lab_8_modules/Lab_8_Student_Handout.md) | [Answer Sheet](lab_8_modules/Lab_8_Answer_Sheet.md) | [Implementation Guide](lab_8_modules/IMPLEMENTATION_GUIDE.md)
+
+**Modules**:
+- [Module 0: What is a Diffusion Model?](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_0_what_is_diffusion.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_0_what_is_diffusion.ipynb)
+- [Module 1: Forward Diffusion Demo](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_1_forward_diffusion.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_1_forward_diffusion.ipynb)
+- [Module 2: Training a Toy Denoiser](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_2_toy_denoiser.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_2_toy_denoiser.ipynb)
+- [Module 3: Multi-Step Denoising](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_3_iterative_denoising.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_3_iterative_denoising.ipynb)
+- [Module 4: Professional Pre-Trained Model](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_4_pretrained_sampling.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_8_modules/lab_8_module_4_pretrained_sampling.ipynb)
+
+**Key Connection to Lab 7:**
+```
+Lab 7 (CNNs):      Image → Features → Classification (Analysis: "What is this?")
+Lab 8 (Diffusion): Noise → Features → Image (Synthesis: "Create this!")
+```
+Both use convolutional architectures—one for understanding, one for creating!
+
+---
+
 ## Adapting for Your Course
 
 This repository is designed to be modular and adaptable:
@@ -247,7 +279,8 @@ data1010/
 ├── lab_4_modules/                               # Deep networks & classification
 ├── lab_5_modules/                               # Embeddings
 ├── lab_6_modules/                               # Saliency & explainability
-└── lab_7_modules/                               # Convolutional neural networks
+├── lab_7_modules/                               # Convolutional neural networks
+└── lab_8_modules/                               # Diffusion models & generative AI
 ```
 
 ## Contributing
