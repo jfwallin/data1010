@@ -4,7 +4,10 @@
       "Bash(ls:*)",
       "Bash(find:*)",
       "Bash(cat:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(for:*)",
+      "Bash(do echo '=== $lab ===' ls -1 c:UsersjfwalOneDrivepython-experiments-2023ml-animateddata1010/$lab_modules)",
+      "Bash(git add:*)"
     ]
   }
 }
