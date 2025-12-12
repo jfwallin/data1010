@@ -279,6 +279,39 @@ This lab uses a **hybrid approach**—students interact with real AI systems (Ch
 
 ---
 
+### Lab 11: Human-AI Collaboration for Creative Problem Solving
+
+**Core Concepts**: AI generation vs. evaluation, rubric-based assessment, human-AI collaboration workflows
+
+**Learning Objectives:**
+
+- Understand that generation is easier than evaluation for AI
+- Apply explicit rubrics to evaluate content quality
+- Recognize that AI self-evaluation is unreliable
+- Use AI as a revision tool with human oversight
+- Develop principles for responsible human-AI collaboration
+- Articulate when to trust AI vs. maintain human judgment
+
+**Materials:**
+
+- [Student Handout](lab_11_modules/Lab_11_Student_Handout.md) | [Answer Sheet](lab_11_modules/Lab_11_Answer_Sheet.md)
+
+**Modules:**
+
+- [Module 0: Setup and Role Assignment](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_0_setup.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_0_setup.ipynb)
+- [Module 1: Generate (Stage 1)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_1_generate.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_1_generate.ipynb)
+- [Module 2: Evaluate (Stage 2)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_2_evaluate.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_2_evaluate.ipynb)
+- [Module 3: Revise & Compare (Stage 3)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_3_revise_compare.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_3_revise_compare.ipynb)
+- [Module 4: Reflection and Synthesis](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_4_reflection.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_11_modules/lab_11_module_4_reflection.ipynb)
+
+**Unique Feature:**
+Like Lab 10, this lab uses a **hybrid approach**—students interact with real AI systems via free web interfaces while notebooks provide structure, rubrics, and data collection tools. Students experience the full cycle: Generate → Evaluate → Revise, discovering that AI cannot reliably judge its own quality.
+
+**Key Pedagogical Message:**
+> **AI is excellent at generation and revision when paired with human evaluation and judgment. The future of AI collaboration is humans guiding AI toward human-defined standards of quality.**
+
+---
+
 ## Adapting for Your Course
 
 This repository is designed to be modular and adaptable:
@@ -314,7 +347,8 @@ data1010/
 ├── lab_6_modules/                               # Saliency & explainability
 ├── lab_7_modules/                               # Convolutional neural networks
 ├── lab_8_modules/                               # Diffusion models & generative AI
-└── lab_10_modules/                              # AI self-assessment & hallucinations
+├── lab_10_modules/                              # AI self-assessment & hallucinations
+└── lab_11_modules/                              # Human-AI collaboration & evaluation
 ```
 
 ## Contributing
