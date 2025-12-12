@@ -246,6 +246,39 @@ Both use convolutional architectures—one for understanding, one for creating!
 
 ---
 
+### Lab 10: AI Self-Assessment and the Hallucination Boundary
+
+**Core Concepts**: AI overconfidence, hallucinations, reliability assessment, and responsible AI usage
+
+**Learning Objectives**:
+
+- Understand that AI confidence ≠ accuracy
+- Recognize patterns of AI overconfidence through empirical testing
+- Identify systematic AI weaknesses (citation hallucinations, ambiguous queries, etc.)
+- Learn verification strategies for AI-generated information
+- Develop critical thinking about when to trust vs. verify AI outputs
+- Apply responsible AI usage principles to real-world scenarios
+
+**Materials**:
+
+- [Student Handout](lab_10_modules/Lab_10_Student_Handout.md) | [Answer Sheet](lab_10_modules/Lab_10_Answer_Sheet.md)
+
+**Modules**:
+
+- [Module 0: Setup and Understanding AI Self-Assessment](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_0_setup.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_0_setup.ipynb)
+- [Module 1: Collecting AI Self-Predictions](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_1_collect_predictions.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_1_collect_predictions.ipynb)
+- [Module 2: Evaluating AI Responses](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_2_evaluate_responses.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_2_evaluate_responses.ipynb)
+- [Module 3: Analysis and Visualization](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_3_analysis.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_3_analysis.ipynb)
+- [Module 4: Synthesis and Implications](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_4_synthesis.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jfwallin/data1010/blob/main/lab_10_modules/lab_10_module_4_synthesis.ipynb)
+
+**Unique Feature:**
+This lab uses a **hybrid approach**—students interact with real AI systems (ChatGPT, Claude, Gemini, etc.) via free web interfaces while using Jupyter notebooks for data collection, analysis, and visualization. No API keys required!
+
+**Key Pedagogical Message:**
+> **AI models are overconfident and make mistakes. Users need caution, testing, and domain knowledge to identify when AI systems fail.**
+
+---
+
 ## Adapting for Your Course
 
 This repository is designed to be modular and adaptable:
@@ -280,7 +313,8 @@ data1010/
 ├── lab_5_modules/                               # Embeddings
 ├── lab_6_modules/                               # Saliency & explainability
 ├── lab_7_modules/                               # Convolutional neural networks
-└── lab_8_modules/                               # Diffusion models & generative AI
+├── lab_8_modules/                               # Diffusion models & generative AI
+└── lab_10_modules/                              # AI self-assessment & hallucinations
 ```
 
 ## Contributing
