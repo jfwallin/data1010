@@ -1,0 +1,2 @@
+id,group_code,timestamp,prediction_short,prediction_long,result_short,result_long,evaluation_short,evaluation_long,notes_short,notes_long
+summary-row,use 5-digit numeric code,ISO 8601,Quick prediction,Full prediction question,Quick result,What actually happened,Quick eval,Full reflection,Quick notes,Any other detail
