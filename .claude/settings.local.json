@@ -8,7 +8,11 @@
       "Bash(for:*)",
       "Bash(do echo '=== $lab ===' ls -1 c:UsersjfwalOneDrivepython-experiments-2023ml-animateddata1010/$lab_modules)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(grep:*)"
     ]
   }
 }
