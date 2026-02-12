@@ -1,81 +1,31 @@
-# Lab 3: Activation Functions & Nonlinearity
-## Answer Sheet
+# Lab 3: When Lines Aren't Enough
+## Activation Functions & Nonlinearity  ·  Answer Sheet
 
 **Course:** DATA 1010 – Artificial Intelligence in Action
 
-**Student Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Group Members (2–4 names)**
 
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+1. _______________________________ 2. _______________________________
+
+3. _______________________________ 4. _______________________________
 
 ---
 
-## Module 0: When Straight Lines Fail
+## Module 0: When Straight Lines Fail  (~5 min)
 
-### Q1. Which dataset(s) can be separated by a straight line?
-
-**Answer:**
-
-<br><br><br>
-
-### Q2. For the XOR pattern (Dataset 2), what happens no matter how you adjust the line? Why can't ANY straight line separate it?
+### Q1. Which dataset could you separate perfectly with a straight line? Describe what happened when you tried the slider on the other two — what kept going wrong no matter how you adjusted it?
 
 **Answer:**
 
 <br><br><br><br>
 
-### Q3. Why can't a straight line separate the circular ring pattern (Dataset 3)? What kind of boundary shape would you need instead?
+### Q2. For the ring dataset, sketch or describe what a boundary would have to look like to correctly put the inner circle on one side and the outer ring on the other. Why is a straight line doomed before you even start?
 
 **Answer:**
 
 <br><br><br><br>
 
----
-
-## Module 1: Activation Functions – Bending Space
-
-### Q4. In your own words, what happens to very large positive and very large negative inputs for sigmoid and tanh?
-
-**Answer:**
-
-<br><br><br>
-
-### Q5. Which activation function changes most rapidly near x = 0? How can you tell from the graph?
-
-**Answer:**
-
-<br><br><br>
-
-### Q6. For the sigmoid activation, what happens to points that were far away from the origin (large |x₁| or |x₂|)? Where do they end up in the activated space?
-
-**Answer:**
-
-<br><br><br>
-
-### Q7. For ReLU, what happens to points where x₁ or x₂ is negative? What shape do you see in the activated space?
-
-**Answer:**
-
-<br><br><br>
-
-### Q8. Which activation warps the grid the most (makes it look least like a square), and how can you tell?
-
-**Answer:**
-
-<br><br><br>
-
-### Q9. When you look at the original space (left plot in Section 5), does the boundary between the two colors look straight or curved?
-
-**Answer:**
-
-<br><br><br>
-
-### Q10. In the activated space (right plot in Section 5), what does the boundary look like?
-
-**Answer:**
-
-<br><br><br>
-
-### Q11. Explain, in one or two sentences, how activation functions help us build more flexible decision rules even if the rule itself is linear after activation.
+### Q3. Based on what you saw, what is one thing a smarter boundary would need to be able to do that a straight line simply cannot?
 
 **Answer:**
 
@@ -83,73 +33,25 @@
 
 ---
 
-## Module 2: Activation Functions in Detail
+## Module 1: Activation Functions — Bending Space  (~5 min)
 
-### Q12. Which activation function has outputs that are always between 0 and 1? Why might this be useful for a model that outputs probabilities?
+> **KEY IDEA:** In Module 0, some dot patterns couldn't be separated by any straight line. One solution would be to invent a more complicated boundary — but that gets messy fast.
+> Activation functions take a completely different approach: they rearrange the dots first, so that a straight line can work afterward. Think of it like untangling a knot before you measure it.
+> Keep that idea in mind as you answer these questions.
 
-**Answer:**
-
-<br><br><br>
-
-### Q13. Which activation function is centered at zero (has negative outputs for negative inputs, positive outputs for positive inputs)?
-
-**Answer:**
-
-<br><br><br>
-
-### Q14. What does "saturation" mean? Which activation functions saturate at extreme input values?
-
-**Answer:**
-
-<br><br><br>
-
-### Q15. ReLU is the most popular activation for hidden layers in modern neural networks. Looking at Section 4's interactive tool, what advantage does ReLU have for very large positive inputs compared to Sigmoid or Tanh?
-
-**Answer:**
-
-<br><br><br>
-
-### Q16. Why is the Step function bad for training neural networks with gradient descent? (Hint: Think about smoothness.)
-
-**Answer:**
-
-<br><br><br>
-
----
-
-## Module 3: Building a Perceptron
-
-### Q17. Write down the two steps of a perceptron in your own words.
-
-**Answer:**
-
-<br><br><br>
-
-### Q18. What do the weights (w₁, w₂) control about the decision boundary?
-
-**Answer:**
-
-<br><br><br>
-
-### Q19. What does the bias (b) control about the decision boundary?
-
-**Answer:**
-
-<br><br><br>
-
-### Q20. Compare Dataset 2 (vertical separation) and Dataset 3 (horizontal separation). For Dataset 2, which weight (w₁ or w₂) needed to be larger to get good classification? For Dataset 3, which weight needed to be larger? Explain why this makes sense.
+### Q4. In your own words, what did the activation function do to the grid of points? Use the before/after comparison in your answer.
 
 **Answer:**
 
 <br><br><br><br>
 
-### Q21. For these linearly separable datasets, did the choice of activation function (Sigmoid vs Tanh vs ReLU vs Step) significantly change whether you could classify the data correctly? Why or why not?
+### Q5. After the warping, you drew what looked like a straight-line rule — but it created a curved boundary in the original space. How does this solve the problem you identified in Q3?
 
 **Answer:**
 
-<br><br><br>
+<br><br><br><br>
 
-### Q22. In Section 6, we saw that neural networks are made of many perceptrons in layers. Why might having multiple layers of perceptrons allow neural networks to solve problems that a single perceptron cannot (like XOR or circles from Module 0)?
+### Q6. Compare how Sigmoid and ReLU each warped the grid. Which changed the space more dramatically? What might be a tradeoff between a dramatic warp and a gentler one?
 
 **Answer:**
 
@@ -157,33 +59,21 @@
 
 ---
 
-## Module 4: Testing the Perceptron's Limits
+## Module 2: Activation Functions in Detail  (~5 min)
 
-### Q23. What was the best accuracy you could achieve on the XOR pattern? Was it close to 100%?
-
-**Answer:**
-
-<br><br><br>
-
-### Q24. What was the best accuracy you could achieve on the concentric circles? Was it close to 100%?
+### Q7. Test a very large positive input (like 100) on Sigmoid and then on ReLU. What does each one output? Which one keeps changing, and which one flattens out?
 
 **Answer:**
 
 <br><br><br>
 
-### Q25. For the XOR pattern, no matter how you adjust w₁, w₂, and b, why can't a single straight line (the perceptron's decision boundary) separate all four clusters correctly?
+### Q8. When a function "saturates," its output barely changes even as the input keeps growing — like squeezing a sponge that's already dry. Why would that be a problem for a model that's trying to learn and adjust itself?
 
 **Answer:**
 
 <br><br><br><br>
 
-### Q26. For the concentric circles, explain why a straight line will always have both blue and red points on both sides of it.
-
-**Answer:**
-
-<br><br><br><br>
-
-### Q27. In Section 5, we saw that multi-layer networks can solve XOR and circles by combining multiple decision boundaries. How many perceptrons in the hidden layer do you think would be needed to solve XOR? Why?
+### Q9. The Step function is the simplest of all — just on or off, like a light switch. If simple is usually good, why isn't Step the obvious choice for a learning system? What does it lose by being so rigid?
 
 **Answer:**
 
@@ -191,9 +81,46 @@
 
 ---
 
-## Reflection (Optional)
+## Module 3: Building a Perceptron  (~5 min)
 
-What was the most surprising or interesting thing you learned in this lab?
+> **KEY IDEA:** A perceptron is the single building block of every neural network. It is tiny and simple on its own — but millions of them, connected in layers, power systems like ChatGPT and image recognition.
+> Before answering, look closely at the two-step diagram in the notebook. Make sure you can trace what happens to a number as it moves through the perceptron from input to output.
+
+### Q10. Look at the two-step diagram in the notebook. Without using any math, describe each step in plain language — what goes in, what happens, and what comes out?
+
+**Answer:**
+
+<br><br><br><br>
+
+### Q11. Try adjusting only the weights while keeping the bias fixed. What changes about the decision boundary? Now try adjusting only the bias. What changes? Describe the difference between what each one controls.
+
+**Answer:**
+
+<br><br><br><br>
+
+### Q12. You've now seen activation functions bend space (Module 1) and a perceptron combine weights, bias, and an activation function (this module). Where exactly in the perceptron does the "bending" happen — Step 1 or Step 2? Why does that matter for what kinds of patterns the perceptron can separate?
+
+**Answer:**
+
+<br><br><br><br>
+
+---
+
+## Module 4: Testing the Perceptron's Limits  (~5 min)
+
+### Q13. What was your best accuracy on XOR? On the circles? Describe what kept happening each time you tried a new setting — what ceiling did you keep hitting, and why couldn't you push past it?
+
+**Answer:**
+
+<br><br><br><br>
+
+### Q14. A single perceptron can only draw one straight line. How many lines would you actually need to correctly separate XOR's four corners? Describe or sketch where you would place them.
+
+**Answer:**
+
+<br><br><br><br>
+
+### Q15. Look back at the whole arc of this lab: straight lines failed → activation functions bent space → a single perceptron still hit a wall. What is the logical next move? What would you add to the system to finally break through?
 
 **Answer:**
 
@@ -205,12 +132,15 @@ What was the most surprising or interesting thing you learned in this lab?
 
 Make sure you have:
 
-- [ ] Completed all 5 modules using the notebooks
-- [ ] Answered all 27 questions (Q1-Q27)
-- [ ] Tested the perceptron on all datasets in Module 3
+- [ ] Completed all 5 modules (Module 0–4) using the notebooks
+- [ ] Answered all 15 questions (Q1–Q15)
+- [ ] Tried the slider on all three datasets in Module 0
+- [ ] Compared Sigmoid and ReLU grid warping in Module 1
+- [ ] Tested large inputs in Module 2
+- [ ] Adjusted weights and bias separately in Module 3
 - [ ] Attempted to classify XOR and circles in Module 4
 - [ ] Written thoughtful, complete answers
-- [ ] Discussed your answers with your group members (if working in a group)
+- [ ] Discussed your answers with your group members
 
 ---
 
