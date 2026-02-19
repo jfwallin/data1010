@@ -1,35 +1,31 @@
-# Lab 4: Real-World Machine Learning with TensorFlow/Keras
+# Lab 4: Building & Training Neural Networks
 ## Answer Sheet
 
 **Course:** DATA 1010 – Artificial Intelligence in Action
 
-**Student Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Group Members (2–4 names)**
 
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+1. _______________________________ 2. _______________________________
+
+3. _______________________________ 4. _______________________________
 
 ---
 
-## Module 0: Lifting Dimensions
+## Module 0: Lifting Dimensions  (~12 min)
 
-### Q1. In 2D, can you draw a straight line that separates the XOR pattern? Why or why not?
+### Q1. In 2D, can you draw a straight line that separates the XOR pattern? After you added x₃ = x₁ × x₂ and looked at the 3D plot, what changed? Describe how the classes became separable.
+
+**Answer:**
+
+<br><br><br><br>
+
+### Q2. When you look straight down at the 3D separating plane (bird's-eye view), what shape does the decision boundary have in the original 2D space? Why isn't it a straight line?
 
 **Answer:**
 
 <br><br><br>
 
-### Q2. After adding the third dimension (x₃ = x₁ × x₂), describe what you observed in the 3D plot. Could you see how a flat plane separates the two classes?
-
-**Answer:**
-
-<br><br><br>
-
-### Q3. When you view the 3D separating plane from directly above (bird's eye view), what shape does the decision boundary have in 2D? Is it a straight line?
-
-**Answer:**
-
-<br><br><br>
-
-### Q4. How is adding a third dimension similar to what activation functions did in Lab 3? (Hint: Think about "transforming" or "warping" space)
+### Q3. How is adding a third dimension similar to what activation functions did in Lab 3? (Hint: both transform the data so a simple rule can work.)
 
 **Answer:**
 
@@ -37,27 +33,21 @@
 
 ---
 
-## Module 1: Anatomy of a Tiny Neural Network
+## Module 1: Anatomy of a Tiny Neural Network  (~15 min)
 
-### Q5. How many total parameters (weights + biases) does a 2-2-1 network have?
-
-**Answer:**
-
-<br><br><br>
-
-### Q6. What do the two hidden neurons (h₁ and h₂) represent? How do they relate to the dimension-lifting you did in Module 0?
+### Q4. How many total parameters (weights + biases) does the 2-2-1 network have? What do the two hidden neurons represent, and how do they relate to the dimension-lifting you did in Module 0?
 
 **Answer:**
 
-<br><br><br>
+<br><br><br><br>
 
-### Q7. When you adjust the weights connecting inputs to hidden layer, what changes about the decision boundary?
+### Q5. When you adjust the weights connecting inputs to the hidden layer, what changes about the decision boundary? What changes when you adjust only the bias?
 
 **Answer:**
 
-<br><br><br>
+<br><br><br><br>
 
-### Q8. Why do we need TWO hidden neurons instead of just one? What would happen with only one hidden neuron?
+### Q6. Why do we need TWO hidden neurons instead of just one? What happens when you try to solve XOR with only one hidden neuron?
 
 **Answer:**
 
@@ -65,27 +55,31 @@
 
 ---
 
-## Module 2: Training a Neural Network
+## Module 2: Training a Neural Network  (~15 min)
 
-### Q9. What is the "loss function" and why do we want to minimize it?
-
-**Answer:**
-
-<br><br><br>
-
-### Q10. Describe what happens when the learning rate is too small vs. too large.
+### Q7. What is the "loss function" and why do we want to minimize it? Describe it as if you were explaining to a friend who has never taken this class.
 
 **Answer:**
 
-<br><br><br>
+<br><br><br><br>
 
-### Q11. How does momentum help gradient descent converge faster?
+### Q8. Describe what happens when the learning rate is too small vs. too large. How does adding momentum help?
 
 **Answer:**
 
-<br><br><br>
+**Too small:**
 
-### Q12. After running multi-start with 5 different random initializations, did all runs converge to the same final loss? What does this tell you about the stochastic nature of training?
+<br><br>
+
+**Too large:**
+
+<br><br>
+
+**Momentum helps by:**
+
+<br><br>
+
+### Q9. When you reset the network and retrain from different random starting points, did every run reach the same final result? What does this tell you about training neural networks?
 
 **Answer:**
 
@@ -93,25 +87,23 @@
 
 ---
 
-## Module 3: Iris Flower Classification
+## Module 3: Penguin Species Classification  (~20 min)
 
-### Q13. Did the linear model (no hidden layer) achieve high accuracy on Iris? Why or why not?
+> The Palmer Penguins dataset has 4 measurements (bill length, bill depth, flipper length, body mass) and 3 species (Adelie, Chinstrap, Gentoo). This is the same kind of problem as XOR — but with real data, more inputs, and more classes.
+
+### Q10. Did the linear model (no hidden layer) achieve high accuracy on Penguins? How much did adding a hidden layer improve it? Why do you think the improvement was large or small?
 
 **Answer:**
+
+Linear model accuracy: ________%
+
+Hidden layer model accuracy: ________%
+
+Explanation:
 
 <br><br><br>
 
-### Q14. How much did adding a hidden layer improve accuracy? Was the improvement large or small?
-
-**Answer:**
-
-<br><br><br>
-
-### Q15. Experiment with different values of `hidden_units` (2, 4, 8, 16, 32, 64). At what point do you see diminishing returns?
-
-**Answer:**
-
-Record your results here:
+### Q11. Experiment with different numbers of hidden units. Record your results in the table. At what point do you see diminishing returns?
 
 | Hidden Units | Test Accuracy |
 |--------------|---------------|
@@ -122,205 +114,72 @@ Record your results here:
 | 32           | ________%     |
 | 64           | ________%     |
 
-Diminishing returns appear around: \_\_\_\_\_ units
+Diminishing returns appear around: _______ units
 
 <br>
 
-### Q16. Compare this to Module 2 XOR training. What's similar? (Hint: gradient descent, weight updates) What's different? (Hint: manual vs. automatic, dataset)
+### Q12. After running each model 5 times, what was the mean accuracy ± standard deviation for each? Did the box plots overlap — and what does that tell you about whether the hidden layer truly helps?
 
 **Answer:**
 
-**Similar:**
+Linear model (5 runs): ________% ± ________%
 
-<br><br>
+Hidden layer model (5 runs): ________% ± ________%
 
-**Different:**
+Do the box plots overlap?  **Yes** / **No**
+
+What this means:
 
 <br><br><br>
-
-### Q17. Why is 95% accuracy considered "excellent" while 100% might be suspicious?
-
-**Answer:**
-
-<br><br><br>
-
-### Q18. Looking at the petal scatter plot, why do you think Versicolor and Virginica are harder to separate than Setosa?
-
-**Answer:**
-
-<br><br><br>
-
-### Q19. (Multiple Runs Section) After running the linear model 5 times, what was the mean accuracy ± standard deviation? Was the model consistent?
-
-**Answer:**
-
-Mean accuracy: \_\_\_\_\_\_% ± \_\_\_\_\_\_%
-
-Consistent? (Circle one):  **Yes** / **No**
-
-Explanation:
-
-<br><br>
-
-### Q20. Did the hidden layer model show more or less variability than the linear model? Why might this be?
-
-**Answer:**
-
-More / Less variability (circle one)
-
-Explanation:
-
-<br><br><br>
-
-### Q21. Looking at the box plots, do the two models' accuracy distributions overlap significantly? What does this tell you about whether hidden layers truly help?
-
-**Answer:**
-
-<br><br><br><br>
 
 ---
 
-## Module 4: Breast Cancer Classification
+## Module 4: Breast Cancer Classification  (~25 min)
 
-### Q22. How did the baseline linear model perform on breast cancer data? Were you surprised? Why or why not?
+> The Wisconsin Breast Cancer dataset has 30 measurements from cell images and a binary label: benign or malignant. This is real medical data — the same principles from XOR apply, but errors have real consequences.
+
+### Q13. How did the baseline linear model (no hidden layers) perform? Were you surprised that a simple model works well with 30 features? Experiment with architectures and record your results.
 
 **Answer:**
 
-Baseline test accuracy: \_\_\_\_\_\_%
+Baseline accuracy: ________%
+
+| Hidden Layers | Units per Layer | Test Accuracy | False Negatives |
+|--------------|-----------------|---------------|-----------------|
+| 0            | N/A             | ________%     | ________        |
+| 1            | 16              | ________%     | ________        |
+| 1            | 32              | ________%     | ________        |
+| 2            | 16              | ________%     | ________        |
+
+Best architecture: _______ layers, _______ units
+
+Were you surprised?
 
 <br><br><br>
 
-### Q23. Did adding hidden layers significantly improve accuracy? At what architecture did you see diminishing returns?
+### Q14. In medical diagnosis, which error is worse — a false positive (predicting cancer when there isn't any) or a false negative (missing real cancer)? Look at your confusion matrices: did more complex models reduce the number of missed cancers?
 
 **Answer:**
 
-Record your architecture experiments:
-
-| Hidden Layers | Units per Layer | Test Accuracy |
-|--------------|-----------------|---------------|
-| 0            | N/A             | ________%     |
-| 1            | 8               | ________%     |
-| 1            | 16              | ________%     |
-| 1            | 32              | ________%     |
-| 2            | 16              | ________%     |
-| 2            | 32              | ________%     |
-
-Best architecture: \_\_\_\_ layers, \_\_\_\_ units per layer
-
-<br>
-
-### Q24. Looking at your confusion matrices, did you reduce false negatives (missed cancers) with more complex models? Is there a trade-off with false positives?
-
-**Answer:**
-
-Baseline false negatives: \_\_\_\_
-Best model false negatives: \_\_\_\_
-
-Trade-off observed?
-
-<br><br><br>
-
-### Q25. In medical diagnosis, which error is more concerning: false positive (predicting cancer when there isn't any) or false negative (missing actual cancer)? Explain your reasoning.
-
-**Answer:**
-
-More concerning: (Circle one)  **False Positive** / **False Negative**
-
-Reasoning:
-
-<br><br><br><br>
-
-### Q26. Compare Module 3 (Iris) and Module 4 (Breast Cancer). Which dataset benefited more from hidden layers? Why might this be? (Think about feature count and class separability)
-
-**Answer:**
-
-Dataset that benefited more: (Circle one)  **Iris** / **Breast Cancer**
-
-Explanation:
-
-<br><br><br><br>
-
-### Q27. Reflect on your journey from Module 0 to now:
-
-**a) What's the connection between manually lifting XOR to 3D (Module 0) and hidden layers in Keras?**
-
-**Answer:**
-
-<br><br><br>
-
-**b) How does `.fit()` relate to the gradient descent you saw in Module 2?**
-
-**Answer:**
-
-<br><br><br>
-
-**c) What's the SAME between 2-feature XOR and 30-feature cancer diagnosis?**
-
-**Answer:**
-
-<br><br><br>
-
-### Q28. Given that a simple linear model achieves ~95% accuracy, why might doctors still want a more complex model? Why might they prefer the simpler one?
-
-**Answer:**
-
-**Reasons for complex model:**
-
-<br><br>
-
-**Reasons for simpler model:**
-
-<br><br><br>
-
-### Q29. (Multiple Runs Section) After running your baseline model 5 times, what was the mean number of false negatives ± std? If this varies from 2-4 missed cancers depending on random initialization, is that acceptable for medical deployment?
-
-**Answer:**
-
-Mean false negatives: \_\_\_\_\_ ± \_\_\_\_\_
-
-Acceptable for medical deployment? (Circle one):  **Yes** / **No**
+More concerning error (circle one):  **False Positive** / **False Negative**
 
 Reasoning:
 
 <br><br><br>
 
-### Q30. Did your custom model reduce false negatives CONSISTENTLY across all 5 runs, or was the improvement inconsistent? What does the box plot tell you?
+Baseline false negatives: ________
+
+Best model false negatives: ________
+
+Did complexity help reduce missed cancers?
+
+<br><br>
+
+### Q15. Look back at the full arc of this lab — from lifting XOR into 3D, to manually tuning 9 weights, to watching gradient descent learn, to classifying penguins, to diagnosing cancer. What is the connection between adding x₃ = x₁ × x₂ in Module 0 and hidden layers in Keras? What's the SAME between 2-feature XOR and 30-feature cancer diagnosis?
 
 **Answer:**
 
-Reduction was: (Circle one)  **Consistent** / **Inconsistent**
-
-What box plot shows:
-
-<br><br><br>
-
-### Q31. If the accuracy box plots for baseline and custom models overlap significantly, what does this mean about the reliability of any "improvement" you measured?
-
-**Answer:**
-
-<br><br><br><br>
-
----
-
-## Reflection (Optional)
-
-### What was the most surprising or interesting thing you learned in this lab?
-
-**Answer:**
-
-<br><br><br><br>
-
-### How has your understanding of machine learning changed from Lab 1 (manual weight adjustment) to Lab 4 (TensorFlow/Keras on real data)?
-
-**Answer:**
-
-<br><br><br><br>
-
-### If you were deploying a medical ML system for cancer diagnosis in a real hospital, what additional steps would you take beyond what we did in this lab?
-
-**Answer:**
-
-<br><br><br><br>
+<br><br><br><br><br>
 
 ---
 
@@ -328,23 +187,18 @@ What box plot shows:
 
 Make sure you have:
 
-- [ ] Completed Module 0 (Lifting Dimensions)
-- [ ] Completed Module 1 (Anatomy of a Tiny Neural Network)
-- [ ] Completed Module 2 (Training a Neural Network)
-- [ ] Completed Module 3 (Iris Classification)
-- [ ] Completed Module 4 (Breast Cancer Classification)
-- [ ] Run the multiple experiments sections in Modules 3 and 4
-- [ ] Filled in all architecture experiment tables (Q15, Q23)
-- [ ] Answered all 31 questions (Q1-Q31)
-- [ ] Recorded mean ± std from multiple runs (Q19, Q29)
-- [ ] Written thoughtful, complete answers
-- [ ] Reflected on medical ethics implications (Q25, Q29)
-- [ ] Connected to earlier labs (Q4, Q16, Q27)
+- [ ] Completed all 5 modules (Module 0–4)
+- [ ] Answered all 15 questions (Q1–Q15)
+- [ ] Experimented with the 3D visualization in Module 0
+- [ ] Manually adjusted weights in Module 1
+- [ ] Trained with different learning rates and momentum in Module 2
+- [ ] Filled in both experiment tables (Q11, Q13)
+- [ ] Recorded mean ± std from multiple runs (Q12)
+- [ ] Discussed medical ethics (Q14)
+- [ ] Written thoughtful, complete answers in your own words
 
 ---
 
-## Submission Instructions
+**Submission Instructions:**
 
 Submit this completed answer sheet according to your instructor's guidelines (PDF upload, hardcopy, etc.).
-
-**Congratulations on completing Lab 4!** You've successfully applied neural networks to real-world data using professional tools.
